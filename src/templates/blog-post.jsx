@@ -1,10 +1,9 @@
+import Header from '../components/header';
+import Helmet from '../components/helmet';
+import Layout from '../components/layout';
+import React from 'react';
 import { graphql } from 'gatsby';
 import moment from 'moment';
-import React from 'react';
-
-import Header from '../components/header';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
 
 const classes = {
   wrapper: 'mt-16 blog-content',
@@ -18,7 +17,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <Header metadata={data.site.siteMetadata} />
-      <SEO title={post.frontmatter.title} />
+      <Helmet title={post.frontmatter.title} />
       <h1 className={classes.title}>{post.frontmatter.title}</h1>
       <p className={classes.date}>
         Posted on {moment(post.frontmatter.date).format('MMMM D, YYYY')}
