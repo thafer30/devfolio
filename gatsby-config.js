@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `Tristan Hafer | Full-Stack Developer`,
     // Description that goes under your name in main bio
-    description: `Full stack web and embedded systems developer`,
+    description: `Full-stack web and embedded systems developer`,
     // Optional: Twitter account handle
     // author: `@rfitzio`,
     // Optional: Github account URL
@@ -15,44 +15,44 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/tristan-hafer-38304b16a`,
     // Content of the About Me section
-    about: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus perferendis porro cumque ea error ab voluptatem. Temporibus adipisci exercitationem similique itaque quibusdam laudantium, qui molestiae quas, aut amet animi id.`,
+    about: `I'm a highly motivated developer with a diverse set of skills across multiple platforms. I have experience with web, desktop, and embedded environments and love taking on new challenges. I am especially passionate about creating great experiences for both the user and developer.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
-        name: 'Devfolio',
+        name: 'Clip 2',
         description:
-          'A zero-config and blazing fast personal site + blog built with GatsbyJs and TailwindCSS',
-        link: 'https://github.com/thafer30/devfolio',
+          'Cat M1 cellular network enabled ambulatory heart monitor',
+        link: '/',
       },
       {
-        name: 'ChromeExtensionKit',
+        name: 'React Customer Dashboard',
         description:
-          'Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates',
-        link: 'https://chromeextensionkit.com/?ref=devfolio',
+          'Web-based customer dashboard used to manage studies and monitors, built with React, Material-UI, and PHP backend.',
+        link: 'https://app.acsdlab.net',
       },
       {
-        name: 'Another Cool Project',
+        name: 'Python Data Entry Tool',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit ducimus perferendis',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+          'Desktop appliaction used to simplify data entry/transfer built with Python and PyQt',
+        link: '/',
       },
     ],
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
       {
-        name: 'Acme Corp',
-        description: 'Full-Stack Developer, February 2020 - Present',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'Applied Cardiac Systems & Diagnostics',
+        description: 'Software Project Manager, September 2022 - Present',
+        link: 'https://acsd4u.com',
       },
       {
-        name: 'Globex Corp',
-        description: 'Full-Stack Developer, December 2017 - February 2020',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'Applied Cardiac Systems & Diagnostics',
+        description: 'Software Developer, September 2019 - 2022',
+        link: 'https://acsd4u.com',
       },
       {
-        name: 'Hooli',
-        description: 'Full-Stack Developer, May 2015 - December 2017',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'Main Street Art',
+        description: 'Web Developer, May 2018 - September 2019',
+        link: 'https://www.msagallery.com/',
       },
     ],
     // Optional: List your skills, they must have `name` and `description`.
@@ -60,16 +60,16 @@ module.exports = {
       {
         name: 'Languages & Frameworks',
         description:
-          'JavaScript (ES6+), Golang, Node.js, Express.js, React, Ruby on Rails, PHP',
+          'C/C++, JavaScript (ES6+), React, Material-UI, PHP, Python, PyQt',
       },
       {
         name: 'Databases',
-        description: 'MongoDB, PostreSQL, MySQL',
+        description: 'MySQL/MariaDB',
       },
       {
         name: 'Other',
         description:
-          'Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
+          'Docker, Google Cloud Platform (GCP), API design, Agile / Scrum',
       },
     ],
   },
