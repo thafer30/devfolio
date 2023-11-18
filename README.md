@@ -35,7 +35,6 @@ For a live demo of a slightly customized version of the template (my own persona
 - [Running Locally](#running-locally)
 - [Deploying](#deploying)
 - [Customization](#customization)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Adding Your Information
@@ -103,7 +102,7 @@ To create a new blog post, create a new folder in `content/blog` with the name b
 
 Next, create an `index.md` file in the new folder with the following at the top of the file (including the lines):
 
-```
+```markdown
 ---
 title: My Blog Title
 date: '2020-09-20T12:00:00.00Z'

@@ -14,6 +14,8 @@ module.exports = {
     github: `https://github.com/thafer30`,
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/tristan-hafer-38304b16a`,
+    // Optional: Link to an external resume
+    resume: `https://rxresu.me/ultpcs/tristan-hafer`,
     // Content of the About Me section
     about: `I'm a highly motivated developer with a diverse set of skills across multiple platforms. I have experience with web, desktop, and embedded environments and love taking on new challenges. I am especially passionate about creating great experiences for both the user and developer.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
@@ -45,7 +47,7 @@ module.exports = {
         link: 'https://acsd4u.com',
       },
       {
-        name: 'Applied Cardiac Systems & Diagnostics',
+        name: 'Applied Cardiac Systems & Diagnostics ',
         description: 'Software Developer, September 2019 - 2022',
         link: 'https://acsd4u.com',
       },
@@ -116,6 +118,7 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

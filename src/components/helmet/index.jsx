@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
+import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -23,7 +24,7 @@ const Head = ({ description, lang, meta, title }) => {
   const finalTitle = title ? `${title} | ${defaultTitle}` : defaultTitle;
 
   return (
-    <div
+    <Helmet
       htmlAttributes={{
         lang,
       }}
