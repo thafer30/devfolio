@@ -29,13 +29,13 @@ module.exports = {
       {
         name: 'React Customer Dashboard',
         description:
-          'Web-based customer dashboard used to manage studies and monitors, built with React, Material-UI, and PHP backend.',
+          'Web-based customer dashboard used to manage studies and monitors, built with React, Material-UI, and PHP backend',
         link: 'https://app.acsdlab.net',
       },
       {
         name: 'Python Data Entry Tool',
         description:
-          'Desktop appliaction used to simplify data entry/transfer built with Python and PyQt',
+          'Desktop application used to simplify data entry/transfer built with Python and PyQt',
         link: '/',
       },
     ],
