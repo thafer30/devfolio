@@ -1,10 +1,11 @@
+import { graphql } from 'gatsby';
+import React from 'react';
+
 import BlogPosts from '../components/blog-posts';
 import Header from '../components/header';
 import Helmet from '../components/helmet';
 import Layout from '../components/layout';
 import NotFound from '../pages/404';
-import React from 'react';
-import { graphql } from 'gatsby';
 
 const Index = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -16,7 +17,7 @@ const Index = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet title="Blog" />
+      <Helmet title='Blog' />
       <Header metadata={data.site.siteMetadata} />
       {!noBlog && <BlogPosts posts={posts} />}
     </Layout>

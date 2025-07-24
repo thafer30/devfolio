@@ -1,8 +1,10 @@
+import { graphql } from 'gatsby';
+import React from 'react';
+
 import Header from '../components/header';
 import Helmet from '../components/helmet';
 import Layout from '../components/layout';
-import React from 'react';
-import { graphql } from 'gatsby';
+
 // import moment from 'moment';
 
 const classes = {
