@@ -119,6 +119,7 @@ const config: GatsbyConfig = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-pnpm`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

@@ -1,7 +1,18 @@
+import type { GatsbyNode } from 'gatsby';
+
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.createPages = async ({ graphql, actions }) => {
+interface BlogPostNode {
+  fields: { slug: string };
+  frontmatter: { title: string };
+}
+
+interface CreatePagesResult {
+  allMarkdownRemark: { edges: Array<{ node: BlogPostNode }> };
+}
+
+const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogPost = path.resolve(`./src/templates/blog-post.jsx`);
@@ -30,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges;
+  const posts = (result.data as CreatePagesResult).allMarkdownRemark.edges;
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
@@ -48,7 +59,11 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+const onCreateNode: GatsbyNode['onCreateNode'] = ({
+  node,
+  actions,
+  getNode,
+}) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
@@ -61,7 +76,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-exports.createSchemaCustomization = ({ actions }) => {
+const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
+  actions,
+}) => {
   const { createTypes } = actions;
   const typeDefs = `
     type SiteSiteMetadata {
@@ -102,3 +119,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   `;
   createTypes(typeDefs);
 };
+
+exports.createPages = createPages;
+exports.onCreateNode = onCreateNode;
+exports.createSchemaCustomization = createSchemaCustomization;

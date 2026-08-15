@@ -1,3 +1,22 @@
+allowBuilds:
+  '@parcel/watcher': true
+  '@tailwindcss/oxide': true
+  core-js: true
+  core-js-pure: true
+  es5-ext: true
+  gatsby: true
+  gatsby-cli: true
+  lmdb: true
+  msgpackr-extract: true
+  sharp: true
 onlyBuiltDependencies:
   - gatsby
   - gatsby-cli
+  - sharp
+  - lmdb
+  - msgpackr-extract
+  - '@tailwindcss/oxide'
+  - core-js
+  - core-js-pure
+  - es5-ext
+  - '@parcel/watcher'
