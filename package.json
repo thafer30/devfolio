@@ -30,6 +30,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "marked": "^18.0.9",
     "prettier": "2.7.1",
     "tailwindcss": "^3.2.1"
   },
@@ -41,6 +42,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop -p8080",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "resumes": "node scripts/convert-resumes.js",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean"

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     // Site URL for when it goes live
-    siteUrl: `https://elastic-meninsky-aa7c74.netlify.app/`,
+    siteUrl: `https://tristanhafer.com/`,
     // Your Name
     name: 'Tristan Hafer',
     // Main Site Title
@@ -14,16 +14,15 @@ module.exports = {
     github: `https://github.com/thafer30`,
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/tristan-hafer-38304b16a`,
-    // Optional: Link to an external resume
-    resume: `https://rxresu.me/ultpcs/tristan-hafer`,
+    // Primary resume (PDF served from /static/resumes)
+    resume: `/resumes/tristan-hafer-fullstack.pdf`,
     // Content of the About Me section
     about: `I'm a highly motivated developer with a diverse set of skills across multiple platforms. I have experience with web, desktop, and embedded environments and love taking on new challenges. I am especially passionate about creating great experiences for both the user and developer.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
         name: 'Clip 2',
-        description:
-          'Cat M1 cellular network enabled ambulatory heart monitor',
+        description: 'Cat M1 cellular network enabled ambulatory heart monitor',
         link: '/',
       },
       {

@@ -1,7 +1,5 @@
 # Devfolio
 
-![Preview](https://user-images.githubusercontent.com/9112801/96329524-c8906600-101b-11eb-8fd8-4d45e7f0cd1b.jpg)
-
 Devfolio is a modern and production-ready personal portfolio and blog template built on GatsbyJS and styled with TailwindCSS. Easily show off your projects, experience, and skills, as well as write blog posts showcasing your knowledge.
 
 Some of the features include:
@@ -15,14 +13,6 @@ Some of the features include:
 - Extend and Customize as Needed
 - Blazing Fast 🙄
 
-**[Need help with the template or have suggestions? Reach out on Twitter anytime!](https://twitter.com/rfitzio)**
-
-## Demo
-
-For a live demo of the base template, [click here](https://elastic-meninsky-aa7c74.netlify.app/).
-
-For a live demo of a slightly customized version of the template (my own personal site), [click here](https://rfitz.io).
-
 ## Contents
 
 - [Adding Your Information](#adding-your-information)
@@ -33,9 +23,7 @@ For a live demo of a slightly customized version of the template (my own persona
   - [Skills](#skills)
 - [Setting Up The Blog](#setting-up-the-blog)
 - [Running Locally](#running-locally)
-- [Deploying](#deploying)
 - [Customization](#customization)
-- [License](#license)
 
 ## Adding Your Information
 
@@ -48,8 +36,7 @@ To get started, either fork or clone the repo. Next, open `gatsby-config.js` whi
 | `siteUrl`     | The URL of your site         | Yes      |
 | `name`        | Your name                    | Yes      |
 | `title`       | The title of your site       | Yes      |
-| `description` | The description of your site | Yes      |
-| `author`      | Your Twitter Handle          | No       |
+| `description` | The description of your site | Yes |
 | `github`      | Your GitHub Profile URL      | No       |
 | `linkedin`    | Your LinkedIn Profile URL    | No       |
 
@@ -63,9 +50,9 @@ The _Projects_ section is defined as an array under the `projects` key in the co
 
 ```js
 {
-  name: 'Devfolio', // Required
-  description: 'A zero-config and blazing fast personal site + blog built with GatsbyJs and TailwindCSS', // Required
-  link: 'https://github.com/RyanFitzgerald/devfolio', // Optional
+  name: 'My Project', // Required
+  description: 'A short description of the project', // Required
+  link: 'https://example.com', // Optional
 }
 ```
 
@@ -75,9 +62,9 @@ The _Experience_ section is defined as an array under the `experience` key in th
 
 ```js
 {
-  name: 'Hooli', // Required
+  name: 'My Company', // Required
   description: 'Full-Stack Developer, May 2015 - December 2017', // Required
-  link: 'https://github.com/RyanFitzgerald/devfolio', // Optional
+  link: 'https://example.com', // Optional
 },
 ```
 
@@ -119,48 +106,6 @@ After that is done, you should now see you're latest blog post on your site (if 
 ## Running Locally
 
 If you're happy with the current layout and design, you can simply edit your `gatsby-config.js` without the need to run it locally. With that said, if you want to spin it up locally, simply run `npm install` to install the required dependencies and then `npm run develop` to start the Gatsby development server. You can also run `npm run format` to run Prettier on the code.
-
-## Deploying
-
-Devfolio is a fully static website by default, so the deployment options are fairly endless. Regardless of the deployment method, the same general idea applies. You first build the static production site by running `npm run build` and then deploy the resulting static assets wherever you want.
-
-With that said, some deployment options are even easier so I will provide a couple examples below:
-
-### Netlify
-
-My deployment source of choice is [Netlify](https://www.netlify.com/) and is where my own [personal site](https://rfitz.io) is hosted. They have a Free Plan and automatically deploy changes to your `master` branch if you connect with GitHub or GitLab.
-
-For the easiest setup possible, simply click:
-
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/RyanFitzgerald/devfolio"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Netlify"/></a>
-
-If you'd rather run through the steps manually, start by creating a free Netlify account with your GitHub.
-
-Next, click **New Site From Git** and click **GitHub** (or another) as the provider.
-
-After that, select the repository where you cloned this into. If you don't see it, you may need to configure the Netlify App on Github via the link they provide.
-
-![Netlify Step 2](https://user-images.githubusercontent.com/9112801/96353255-4bef9d00-1098-11eb-88ba-1ae7a4cec8d3.png)
-
-Finally, ensure that it set the _Basic Build Settings_ correctly. You want to ensure that the **Build Command** is set to `gatsby build` and the **Publish Directory** is set to `public/`. Once complete, click **Deploy Site** and you should be good to go!
-
-### Vercel
-
-Another straightforward way to deploy devfolio is to use [Vercel](https://vercel.com/). The platform also offers a Hobby plan that will allow you to host the project free-of-charge.
-
-You can deploy devfolio with just a few clicks:
-
-<a href="https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FRyanFitzgerald%2Fdevfolio&project-name=devfolio&repository-name=devfolio"><img src="https://vercel.com/button" alt="Vercel"/></a>
-
-As with Netlify, the deployment can be also done manually following identical settings.
-
-### GitHub Pages
-
-If you'd like, you can setup a build pipeline fairly easily that allows you to use GitHub Pages. To find more information, [read this guide](https://www.gatsbyjs.com/docs/how-gatsby-works-with-github-pages/).
-
-### Other
-
-If you want to learn more about the many other options to deploy, take a look at the [Deploying & Hosting](https://www.gatsbyjs.com/docs/deploying-and-hosting/) section of the GatsbyJS docs where they go through examples on how to deploy on Gatsby Cloud, Azure, AWS Amplify, AWS S3, and many more.
 
 ## Customization
 
@@ -217,6 +162,11 @@ All the possible classes are defined above and just referenced in the `className
 
 This is however just a recommendation, the template allows you to write the components in any way you wish.
 
-## License
+## Resume Variants
 
-Licensed under the [MIT License](https://github.com/RyanFitzgerald/devfolio/blob/master/LICENSE.md).
+The site serves multiple resume PDFs from `static/resumes/`. The header "Resume" link points to the general-purpose variant at `/resumes/tristan-hafer-fullstack.pdf`.
+
+- Resume sources live as markdown in `content/resumes/` (not served publicly). Each carries its variant title as a heading so it self-identifies.
+- Convert them to PDFs with `npm run resumes` (requires `chromium` on PATH, or set `CHROMIUM_BIN`). The generated PDFs are committed alongside the sources.
+- There is no index page — share the direct URL of the relevant variant when applying.
+- The build requires Node 18 (Gatsby 4 is incompatible with newer Node versions).

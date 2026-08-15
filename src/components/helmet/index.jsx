@@ -30,9 +30,15 @@ const Head = ({ description, lang, meta, title }) => {
       <meta property={`og:description`} content={metaDescription} />
       <meta property={`og:type`} content={`website`} />
       <meta property={`twitter:card`} content={`summary`} />
-      <meta property={`twitter:creator`} content={site.siteMetadata?.author || ``} />
+      <meta
+        property={`twitter:creator`}
+        content={site.siteMetadata?.author || ``}
+      />
       <meta property={`twitter:title`} content={finalTitle} />
       <meta property={`twitter:description`} content={metaDescription} />
+      {meta.map((item, index) => (
+        <meta key={index} {...item} />
+      ))}
     </>
   );
 };
