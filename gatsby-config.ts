@@ -1,4 +1,6 @@
-module.exports = {
+import type { GatsbyConfig } from "gatsby";
+
+const config: GatsbyConfig = {
   siteMetadata: {
     // Site URL for when it goes live
     siteUrl: `https://elastic-meninsky-aa7c74.netlify.app/`,
@@ -22,8 +24,7 @@ module.exports = {
     projects: [
       {
         name: 'Clip 2',
-        description:
-          'Cat M1 cellular network enabled ambulatory heart monitor',
+        description: 'Cat M1 cellular network enabled ambulatory heart monitor',
         link: '/',
       },
       {
@@ -118,6 +119,7 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-pnpm`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -138,3 +140,6 @@ module.exports = {
     },
   ],
 };
+
+
+export default config;

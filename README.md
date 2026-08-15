@@ -188,7 +188,7 @@ You can easily modify those pages and create new ones. Gatsby core automatically
 
 ### Adding or Updating Styles
 
-Devfolio is fully styled with [TailwindCSS](https://tailwindcss.com/) with the exception of a couple minor additional styles, as found in `src/css/index.css`.
+Devfolio is fully styled with [TailwindCSS](https://tailwindcss.com/) with the exception of a couple minor additional styles, as found in `src/styles/global.css`.
 
 When the GatsbyJS development server is running, you'll have access to all of the Tailwind styles, however once you deploy (i.e. build the static assets), PurgeCSS runs against them and only leaves the Tailwind styles that were actually used. This is beneficial because it keeps the build size considerably smaller, however there are some important considerations to keep in mind in order to keep the HTML purgeable. For example, if you use string concatenation to create a class name, PurgeCSS won't be able to figure out what that is. For more information on writing purgeable HTML + other methods to control file size, [click here](https://tailwindcss.com/docs/controlling-file-size).
 

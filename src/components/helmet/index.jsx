@@ -1,22 +1,19 @@
 import { graphql, useStaticQuery } from 'gatsby';
-
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const Head = ({ description, lang, meta, title }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
         }
       }
-    `
-  );
+    }
+  `);
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
@@ -30,7 +27,10 @@ const Head = ({ description, lang, meta, title }) => {
       <meta property={`og:description`} content={metaDescription} />
       <meta property={`og:type`} content={`website`} />
       <meta property={`twitter:card`} content={`summary`} />
-      <meta property={`twitter:creator`} content={site.siteMetadata?.author || ``} />
+      <meta
+        property={`twitter:creator`}
+        content={site.siteMetadata?.author || ``}
+      />
       <meta property={`twitter:title`} content={finalTitle} />
       <meta property={`twitter:description`} content={metaDescription} />
     </>
